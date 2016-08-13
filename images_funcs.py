@@ -21,12 +21,16 @@ def shades_func(image0):
     del draw
     return (pix,width,height)
 
-def ImgInStr(pixels,width,height):
-    mass = [[],[]]
+def ImgInInt(pixels,width,height):
+    mass = []
+    for r in range(width):
+        mass.append([])
+        for c in range(height):
+            mass[r].append(0)
     for i in range (width):
         for j in range (height):
             mass[i][j] = pixels[i,j][0]
-
+    return (mass)
 
 
 
