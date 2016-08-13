@@ -42,5 +42,14 @@ def MassMovementToMaxBright(mass,width,height,max):    #Смещение зна�
             mass[i][j] = mass[i][j] + factor
     return mass
 
+def MassToBool(mass,width,height):
+    for i in range(width):
+        for j in range(height):
+            if mass[i][j] == 255:
+                mass[i][j] = True
+            else:
+                mass[i][j] = False
+    return mass
+
 
 
