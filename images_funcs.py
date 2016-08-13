@@ -32,7 +32,7 @@ def ImgInInt(pixels,width,height):                  #первод списка �
             mass[i][j] = pixels[i,j][0]
     return (mass)
 
-def DrawingImage(shades,width,height):
+def DrawingImage(shades,width,height):                 #создание изображения из числового массива
     image = Image.new("L",(width,height),0)
     draw = ImageDraw.Draw(image)
     for i in range(width):
