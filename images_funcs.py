@@ -32,13 +32,13 @@ def ImgInInt(pixels,width,height):                  #первод списка �
             mass[i][j] = pixels[i,j][0]
     return (mass)
 
-def DrawingImage(shades,width,height):                 #создание изображения из числового массива
+def DrawingImage(shades,width,height,name):                 #создание изображения из числового массива
     image = Image.new("L",(width,height),0)
     draw = ImageDraw.Draw(image)
     for i in range(width):
         for j in range(height):
             draw.point((i,j),(shades[i][j]))
-    image.save("answer.jpg","JPEG")
+    image.save(str(name)+".jpg","JPEG")
     del draw
 
 
