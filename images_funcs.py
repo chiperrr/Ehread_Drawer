@@ -3,7 +3,7 @@ from PIL import *
 from PIL import Image
 from PIL import ImageDraw
 
-def shades_func(image0):
+def shades_func(image0):                                #функция загружает изображение и переводит в оттенки серого
     image = Image.open(image0)
     draw = ImageDraw.Draw(image)
     width = image.size[0]
@@ -21,7 +21,7 @@ def shades_func(image0):
     del draw
     return (pix,width,height)
 
-def ImgInInt(pixels,width,height):
+def ImgInInt(pixels,width,height):                  #первод списка пикселей в богоприятный двумерный список
     mass = []
     for r in range(width):
         mass.append([])
